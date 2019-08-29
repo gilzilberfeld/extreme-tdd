@@ -446,3 +446,7 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/java,eclipse,visualstudio
+
+#	ApprovalTests
+*.approved.txt
+*.received.txt
