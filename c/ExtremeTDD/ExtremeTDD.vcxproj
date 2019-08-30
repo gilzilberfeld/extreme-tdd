@@ -37,10 +37,20 @@
     <ClInclude Include="src\calculator\Calculator.h" />
     <ClInclude Include="src\calculator\Display.h" />
     <ClInclude Include="src\calculator\OperationType.h" />
+    <ClInclude Include="src\pastamaker\Dispenser.h" />
+    <ClInclude Include="src\pastamaker\Ingredient.h" />
+    <ClInclude Include="src\pastamaker\IngredientType.h" />
+    <ClInclude Include="src\pastamaker\PastaMaker.h" />
+    <ClInclude Include="src\pastamaker\PastaType.h" />
+    <ClInclude Include="src\pastamaker\PlaceType.h" />
+    <ClInclude Include="src\pastamaker\SauceType.h" />
     <ClInclude Include="tests\calculator\MockDisplay.h" />
+    <ClInclude Include="tests\pastamaker\ApprovalTests.hpp" />
+    <ClInclude Include="tests\pastamaker\Dish.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\calculator\calcuator.c" />
+    <ClCompile Include="src\pastamaker\PastaMaker.c" />
     <ClCompile Include="tests\calculator\CalculatorTests.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -49,6 +59,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="tests\calculator\MockDisplay.c" />
+    <ClCompile Include="tests\pastamaker\Dish.cpp" />
+    <ClCompile Include="tests\pastamaker\PastaMaker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

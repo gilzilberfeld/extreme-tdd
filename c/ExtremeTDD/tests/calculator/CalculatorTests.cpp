@@ -14,7 +14,7 @@ extern "C"
 #include "MockDisplay.h";
 
 TEST(CalculatorTests, CancelTheFirstNumber) {
-	Init;
+	InitCalculator;
 	Press('1');
 	Press('C');
 	string display = GetDisplay();
@@ -23,7 +23,7 @@ TEST(CalculatorTests, CancelTheFirstNumber) {
 
 
 TEST(CalculatorTests, CancelTheFirstNumber2) {
-	Init();
+	InitCalculator();
 	Press('1');
 	Press('C');
 	Press('2');
@@ -32,7 +32,7 @@ TEST(CalculatorTests, CancelTheFirstNumber2) {
 }
 
 TEST(CalculatorTests, CancelAfterOperation) {
-	Init();
+	InitCalculator();
 	Press('1');
 	Press('+');
 	Press('C');
@@ -41,14 +41,14 @@ TEST(CalculatorTests, CancelAfterOperation) {
 }
 
 TEST(CalculatorTests, NotEnoughInfo) {
-	Init();
+	InitCalculator();
 	Press('1');
 	string display = GetDisplay();
 	EXPECT_EQ(display, "1");
 }
 
 TEST(CalculatorTests, TwoNumbers) {
-	Init();
+	InitCalculator();
 	Press('1');
 	Press('2');
 	string display = GetDisplay();
@@ -56,7 +56,7 @@ TEST(CalculatorTests, TwoNumbers) {
 }
 
 TEST(CalculatorTests, TwoNumbersOp) {
-	Init();
+	InitCalculator();
 	Press('1');
 	Press('C');
 	Press('+');
@@ -65,7 +65,7 @@ TEST(CalculatorTests, TwoNumbersOp) {
 }
 
 TEST(CalculatorTests, CancelTheFirstNumber_WithExternalDisplay) {
-	InitWithDisplay(&Mock_IsConnected, &Mock_Show);
+	InitCalculatorWithDisplay(&Mock_IsConnected, &Mock_Show);
 	Press('1');
 	string display1(externalDisplay);
 	EXPECT_EQ(display1, "1");

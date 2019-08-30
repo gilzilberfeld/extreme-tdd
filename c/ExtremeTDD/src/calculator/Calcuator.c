@@ -16,15 +16,15 @@ int lastArgument = 0;
 bool newArgument = false;
 bool shouldReset = false;
 
-bool Init()
+bool InitCalculator()
 {
 	memset(display, 0, 10);
 	display[0] = '\0';
 }
 
-void InitWithDisplay(IsConnected_ptr isConnectedFunc, Show_ptr show)
+void InitCalculatorWithDisplay(IsConnected_ptr isConnectedFunc, Show_ptr show)
 {
-	Init();
+	InitCalculator();
 	Display_IsConnected = isConnectedFunc;
 	Display_Show = show;
 }
