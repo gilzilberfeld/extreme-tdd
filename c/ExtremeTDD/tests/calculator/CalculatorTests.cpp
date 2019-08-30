@@ -1,13 +1,18 @@
+#include "..\\..\\pch.h"
+
 #include <string>
 using namespace std;
 
-#include "..\\..\\pch.h"
 
 extern "C"
 {
 #include "..\\..\\src\calculator\Display.h"
 #include "..\\..\\src\calculator\Calculator.h"
+#include "MockDisplay.h"
 }
+
+#include "MockDisplay.h";
+
 TEST(CalculatorTests, CancelTheFirstNumber) {
 	Init;
 	Press('1');
@@ -59,3 +64,12 @@ TEST(CalculatorTests, TwoNumbersOp) {
 	EXPECT_EQ(display, "0");
 }
 
+TEST(CalculatorTests, CancelTheFirstNumber_WithExternalDisplay) {
+	InitWithDisplay(&Mock_IsConnected, &Mock_Show);
+	Press('1');
+	string display1(externalDisplay);
+	EXPECT_EQ(display1, "1");
+	Press('2');
+	string display2(externalDisplay);
+	EXPECT_EQ(display2, "12");
+}

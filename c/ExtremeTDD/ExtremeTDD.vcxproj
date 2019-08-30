@@ -37,6 +37,7 @@
     <ClInclude Include="src\calculator\Calculator.h" />
     <ClInclude Include="src\calculator\Display.h" />
     <ClInclude Include="src\calculator\OperationType.h" />
+    <ClInclude Include="tests\calculator\MockDisplay.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\calculator\calcuator.c" />
@@ -47,6 +48,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tests\calculator\MockDisplay.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
