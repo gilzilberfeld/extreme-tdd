@@ -45,11 +45,13 @@
     <ClInclude Include="src\pastamaker\PlaceType.h" />
     <ClInclude Include="src\pastamaker\SauceType.h" />
     <ClInclude Include="tests\calculator\MockDisplay.h" />
-    <ClInclude Include="tests\pastamaker\ApprovalTests.hpp" />
+    <ClInclude Include="ApprovalTests.hpp" />
     <ClInclude Include="tests\pastamaker\Dish.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\calculator\calcuator.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\pastamaker\MainDispenser.c" />
     <ClCompile Include="src\pastamaker\PastaMaker.c" />
     <ClCompile Include="tests\calculator\CalculatorTests.cpp" />
     <ClCompile Include="pch.cpp">
@@ -60,7 +62,7 @@
     </ClCompile>
     <ClCompile Include="tests\calculator\MockDisplay.c" />
     <ClCompile Include="tests\pastamaker\Dish.cpp" />
-    <ClCompile Include="tests\pastamaker\PastaMaker.cpp" />
+    <ClCompile Include="tests\pastamaker\PastaMakerTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

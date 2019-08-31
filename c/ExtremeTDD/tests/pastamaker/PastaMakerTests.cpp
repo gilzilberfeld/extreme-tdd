@@ -3,11 +3,12 @@
 #include <string>
 using namespace std;
 
-#include "ApprovalTests.hpp"
+#include "..//..//ApprovalTests.hpp"
+using namespace ApprovalTests;
+
 
 extern "C"
 {
-
 #include "..\\..\\src\\pastamaker\Ingredient.h"
 #include "..\\..\\src\\pastamaker\IngredientType.h"
 #include "..\\..\\src\\pastamaker\PastaType.h"
@@ -17,19 +18,16 @@ extern "C"
 #include "..\\..\\src\\pastamaker\PastaMaker.h"
 }
 
-//#include "MockDisplay.h";
-
+#include "Dish.h"
 TEST(PastaMakerTests, theTest)
 {
+	string log;
+	InitPastaMaker(&MainDispenser_GetIngredient, &MainDispenser_GetPasta);
 
-	//StringBuilder log = new StringBuilder();
-	//Dispenser dispenser = new MainDispenser();
-	//PastaMaker maker = new PastaMaker(dispenser);
+	Dish dish(Alfredo, FreshSpaghetti);
+	log.append(dish.ToString());
+	Cook(Alfredo, FreshSpaghetti);
 
-	//Dish dish = new Dish(SauceType.Alfredo, PastaType.FreshSpaghetti);
-	//log.append(dish.toString());
-	//maker.cook(dish.sauce, dish.pasta);
-
-	//Approvals.verify(log);
+	Approvals::verify(log);
 
 }

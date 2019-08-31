@@ -14,13 +14,14 @@ using namespace std;
 
 Dish::Dish(SauceType sauce, PastaType pasta)
 {
-	sauce = sauce;
-	pasta = pasta;
+	this->sauce = sauce;
+	this->pasta = pasta;
 }
 
 string Dish::ToString()
 {
-	string line = "Sauce : " + to_string(sauce) + 
-		"Pasta : " + to_string(pasta) + "\n";
+	string line = "Sauce : " + to_string(sauce) +
+		" Pasta : " + to_string(pasta);
+	line.append("\n");
 	return line;
 }
