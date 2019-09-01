@@ -1,10 +1,9 @@
-
 export const IngredientType = {
     Cream : 0,
     Onion : 1,
     Tomato: 2,
     Basil: 3
-};
+}
 
 export const PastaType = {
 	FreshSpaghetti : 0,
@@ -64,7 +63,7 @@ export class PastaMaker {
         }
         else if (sauce === SauceType.Bolognese || sauce === SauceType.Marinara)
         {
-            ingredients.push(dispenser.getIngredient(IngredientType.Tomato, PlaceType.Garden));
+            ingredients.push(this.dispenser.getIngredient(IngredientType.Tomato, PlaceType.Garden));
         }
         else if (pastaType === PastaType.Ravioly)
         {

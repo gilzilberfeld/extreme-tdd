@@ -1,4 +1,4 @@
-import { MainDispenser, SauceType, PastaType, PastaMaker, PlaceType } from '../apps/pastamaker/PastaMaker'
+import { MainDispenser, SauceType, PastaType, PastaMaker } from '../apps/pastamaker/PastaMaker'
 
 class Dish {
   constructor (sauce, pasta) {
@@ -11,14 +11,14 @@ class Dish {
   }
 
 }
+
 it('should make pasta', () => {
   let dispenser  = new MainDispenser();
   let pastamaker = new PastaMaker(dispenser);
   let dish = new Dish(SauceType.Alfredo, PastaType.FreshSpaghetti);
 
   var logger = "Log: \n".concat(dish.toString());
-  console.log(logger);
-
+ 
   pastamaker.cook(dish.sauce, dish.pasta);
   expect(logger).toMatchSnapshot();
 });
