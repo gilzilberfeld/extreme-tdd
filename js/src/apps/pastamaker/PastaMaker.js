@@ -1,39 +1,39 @@
 
-const IngredientType = {
+export const IngredientType = {
     Cream : 0,
     Onion : 1,
     Tomato: 2,
     Basil: 3
 };
 
-const PastaType = {
+export const PastaType = {
 	FreshSpaghetti : 0,
     Lasagnia : 1,
     Ravioly : 2,
     Macaroni: 3
 };
 
-const PlaceType = {
+export const PlaceType = {
     Refrigarator : 0 ,
     Garden : 1,
     Cupboard : 2,
     Freezer :3
 };
 
-const SauceType = {
+export const SauceType = {
     Marinara : 0,
     Alfredo : 1,
     Bolognese : 2,
     Pesto : 3
 };
 
-class Ingredient {
+export class Ingredient {
     constructor(isPastaType) {
         this.IsPastaType = isPastaType;
     }
 };
 
-class MainDispenser {
+export class MainDispenser {
     getIngredient(ingredient, place) {
         return new Ingredient(false);
     }
@@ -44,7 +44,7 @@ class MainDispenser {
 };
 
 
-class PastaMaker {
+export class PastaMaker {
 	
 
 	constructor( dispenser) {
@@ -60,11 +60,11 @@ class PastaMaker {
         var ingredients = [];
         if (sauce === SauceType.Alfredo)
         {
-            ingredients.push(this.dispenser.getIngredient(IngredientType.Cream, Place.Refrigarator));
+            ingredients.push(this.dispenser.getIngredient(IngredientType.Cream, PlaceType.Refrigarator));
         }
         else if (sauce === SauceType.Bolognese || sauce === SauceType.Marinara)
         {
-            ingredients.push(dispenser.getIngredient(IngredientType.Tomato, Place.Garden));
+            ingredients.push(dispenser.getIngredient(IngredientType.Tomato, PlaceType.Garden));
         }
         else if (pastaType === PastaType.Ravioly)
         {
@@ -85,20 +85,20 @@ class PastaMaker {
         {
             ingredients.push(this.dispenser.getPasta(PastaType.FreshSpaghetti, PlaceType.Freezer));
         }
-        if (ingredients[0].IsPastaType())
+        if (ingredients[0].IsPastaType)
         {
             var fillingIngredients = ingredients.slice(1, ingredients.length);
-            prepare(ingredients[0]);
-            fill(fillingIngredients);
-            cookPasta();
+            this.prepare(ingredients[0]);
+            this.fill(fillingIngredients);
+            this.cookPasta();
         }
         else
         {
-            cookPasta();
+            this.cookPasta();
             var sauceIngredients = ingredients.slice();
-            prepare(ingredients[ingredients.length- 1]);
-            fill(sauceIngredients);
-            addSauce();
+            this.prepare(ingredients[ingredients.length- 1]);
+            this.fill(sauceIngredients);
+            this.addSauce();
         }
     }
 
