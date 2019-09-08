@@ -19,8 +19,9 @@ extern "C"
 }
 
 #include "Dish.h"
+
 /*
-TEST_CASE("PastaMakerTests")
+TEST_CASE("PastaMakerTests",)
 {
 	string log;
 	InitPastaMaker(&MainDispenser_GetIngredient, &MainDispenser_GetPasta);

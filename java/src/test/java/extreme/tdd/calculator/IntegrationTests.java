@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.io.UnsupportedEncodingException;
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,7 @@ public class IntegrationTests{
 
 	@Autowired	private MockMvc mockMvc;
 	
-
-
+	@Ignore
 	@Test
 	public void SimpleCalcuation() throws Exception {
 		mockMvc.perform(
@@ -47,6 +47,7 @@ public class IntegrationTests{
 
 	}
 	
+	@Ignore
 	@Test
 	public void ShowLastOperand_AfterOperation() throws Exception {
 		pressKey("5");
