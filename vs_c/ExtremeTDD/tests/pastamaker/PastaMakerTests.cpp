@@ -19,7 +19,7 @@ extern "C"
 }
 
 #include "Dish.h"
-TEST(PastaMakerTests, theTest)
+TEST(DISABLED_PastaMakerTests, theTest)
 {
 	string log;
 	InitPastaMaker(&MainDispenser_GetIngredient, &MainDispenser_GetPasta);
