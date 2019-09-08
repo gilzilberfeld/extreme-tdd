@@ -1,7 +1,7 @@
-#include "../../ApprovalTests.hpp"
+#include "../../lib/ApprovalTests.hpp"
 using namespace ApprovalTests;
 
-#include "../../Catch.hpp"
+#include "../../lib/Catch.hpp"
 
 #include <string>
 using namespace std;

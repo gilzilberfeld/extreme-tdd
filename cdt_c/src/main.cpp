@@ -1,3 +1,4 @@
+
 #define APPROVALS_CATCH
-#include "ApprovalTests.hpp"
+#include "lib/ApprovalTests.hpp"
 
