@@ -19,6 +19,7 @@ extern "C"
 }
 
 #include "Dish.h"
+/*
 TEST_CASE("PastaMakerTests")
 {
 	string log;
@@ -30,4 +31,4 @@ TEST_CASE("PastaMakerTests")
 
 	Approvals::verify(log);
 }
-
+*/
