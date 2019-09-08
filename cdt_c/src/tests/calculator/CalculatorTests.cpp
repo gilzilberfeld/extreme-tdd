@@ -1,6 +1,4 @@
-#define CATCH_CONFIG_MAIN
-#include "..\\..\\Catch.hpp"
-
+#include "../../Catch.hpp"
 
 #include <string>
 using namespace std;
@@ -13,7 +11,7 @@ extern "C"
 #include "MockDisplay.h"
 }
 
-
+/*
 TEST_CASE("CancelTheFirstNumber") {
 	InitCalculator();
 	Press('1');
@@ -75,3 +73,4 @@ TEST_CASE("CancelTheFirstNumber_WithExternalDisplay") {
 	REQUIRE(display2 == "12");
 }
 
+*/

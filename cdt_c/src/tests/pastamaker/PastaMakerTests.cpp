@@ -1,24 +1,25 @@
-/*
+#include "../../ApprovalTests.hpp"
+using namespace ApprovalTests;
+
+#include "../../Catch.hpp"
+
 #include <string>
 using namespace std;
-
-#include "..//..//ApprovalTests.hpp"
-using namespace ApprovalTests;
 
 
 extern "C"
 {
-#include "..\\..\\src\\pastamaker\Ingredient.h"
-#include "..\\..\\src\\pastamaker\IngredientType.h"
-#include "..\\..\\src\\pastamaker\PastaType.h"
-#include "..\\..\\src\\pastamaker\PlaceType.h"
-#include "..\\..\\src\\pastamaker\SauceType.h"
-#include "..\\..\\src\\pastamaker\Dispenser.h"
-#include "..\\..\\src\\pastamaker\PastaMaker.h"
+#include "..\\..\\pastamaker\Ingredient.h"
+#include "..\\..\\pastamaker\IngredientType.h"
+#include "..\\..\\pastamaker\PastaType.h"
+#include "..\\..\\pastamaker\PlaceType.h"
+#include "..\\..\\pastamaker\SauceType.h"
+#include "..\\..\\pastamaker\Dispenser.h"
+#include "..\\..\\pastamaker\PastaMaker.h"
 }
 
 #include "Dish.h"
-TEST_CASE(PastaMakerTests)
+TEST_CASE("PastaMakerTests")
 {
 	string log;
 	InitPastaMaker(&MainDispenser_GetIngredient, &MainDispenser_GetPasta);
@@ -28,6 +29,5 @@ TEST_CASE(PastaMakerTests)
 	Cook(Alfredo, FreshSpaghetti);
 
 	Approvals::verify(log);
-
 }
-*/
+
