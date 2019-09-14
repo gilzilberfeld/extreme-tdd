@@ -14,4 +14,11 @@ Spring Boot:  2.1.7
 ## Prerequisites for workshop:
 IDE: Eclipse or IntelliJ
 Maven
+Add the JDK to the module path
+Add JUnit 5 to the classpath:
+  Properties -> Java Build Path -> Libraries
+  Select the ClassPath and press "Add Library"
+  Select JUnit and press "Next >"
+  Select JUnit library version: JUnit 5
+  Press Finish
 Diff tool: (I'm using [KDiff3](http://kdiff3.sourceforge.net/))
