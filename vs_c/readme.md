@@ -3,6 +3,8 @@ Extreme TDD Workshop exercises - Visual Studio C
 
 These are the source files created in a project with Visual Studio and the VC++ compiler. The tests are written in C++ with the GoogleTest framework. There is also a [Eclipse CDT version with MinGW toolchain](https://github.com/gilzilberfeld/extreme-tdd/tree/master/cdt_c/) of the exercises.
 
+Tests should run and fail.
+
 ## Created with:
 Windows:        10
 Visual Studio:  2019

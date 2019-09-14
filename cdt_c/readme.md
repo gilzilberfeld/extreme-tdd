@@ -3,6 +3,8 @@ Extreme TDD Workshop exercises - C
 
 These are the source files created in a project with Eclipse CDT and the MinGW toolchain. The tests are written in C++ with the Catch framework. There is also a [Visual Studio version](https://github.com/gilzilberfeld/extreme-tdd/tree/master/vs_c/ExtremeTDD) of the exercises.
 
+Tests should run and fail.
+
 ## Created with:
 Windows:      10
 Eclipse CDT:  2019-03

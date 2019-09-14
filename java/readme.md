@@ -1,7 +1,9 @@
 # Description:
 Extreme TDD Workshop exercises - Java
 
-These are the source files created in a project with Spring Boot. 
+These are the source files created in a project with Spring Boot.
+
+Tests should run and fail.
 
 ## Created with:
 Eclipse:      2019-03
